@@ -1,0 +1,21 @@
+type CM implements Node {
+  id: ID!
+  creationDate: Int!
+  companyAndApplicant: [String!]!
+  latestUpdateDate: Int!
+  updater: String
+  topic: String
+  affectedPartNumbers: [Int!]!
+  description: String!
+  technicalDocumentation: String!
+  changeImplemented: String!
+  approval: [String!]!
+  impact: [String!]!
+  assemblies: [String!]!
+  costEffects: [String!]!
+  affectedModels: [String!]!
+  modelFirstImplemented: String!
+  statusOfChange: String!
+  implemented: Boolean
+  creator: String!
+}

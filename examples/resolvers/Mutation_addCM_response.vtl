@@ -1,0 +1,21 @@
+## define list of known columns that should not be mapped to the key_value_pair parameter
+#set($non_keys = ["id", "language", "name", "username", "shop_locale", "role", "analytics_enabled", "devices", "sort_key", "updated"])
+## initialize a copy of ctx.result variable as one cannot work on the context variable itself (throws exception)
+#set ($resultCopy = {})
+## initialize container for key_value_pairs
+#set ($key_value_pairs = {})
+## copy result attribute of context variable
+$!resultCopy.putAll($ctx.result)
+## loop through each attribute of results 
+#foreach ($entry in $resultCopy.entrySet())
+	## if column is not known add to key_value_pairs container
+  	#if(!$non_keys.contains($entry.key) ) 
+    	## use dummy as this return boolean otherwise
+		#set($dummy = $key_value_pairs.put($entry.key, $entry.value))
+  	#end
+#end
+## finally add key_value_pairs container to result attribute of context variable if not empty
+#if (!$key_value_pairs.isEmpty())
+	#set($ctx.result.key_value_pairs = $key_value_pairs)
+#end
+$utils.toJson($ctx.result)

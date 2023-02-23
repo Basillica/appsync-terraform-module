@@ -1,0 +1,203 @@
+locals {
+  schemas_lists = [for file in fileset(var.schema_directory, "*.graphql"): 
+    file(join("", [var.schema_directory, "/", file]))
+  ]
+  schemas = join("", local.schemas_lists)
+  apiTypes = jsondecode(file("${path.cwd}/apiTypes.json"))
+  resolvers = { for f in fileset(var.resolver_path, "*.vtl") : f => merge({
+    type  = split("_", f)[0]
+    field  = split("_", f)[1]
+
+    request_template =  "${var.resolver_path}/${f}"
+    response_template =  "${var.resolver_path}/${f}"
+    
+    datasources = local.apiTypes[split("_", f)[0]][split("_", f)[1]]
+  }) if var.create_graphql_api }
+}
+
+# GraphQL API
+resource "aws_appsync_graphql_api" "this" {
+  count = var.create_graphql_api ? 1 : 0
+
+  name                = var.api_name
+  authentication_type = var.authentication_type
+  schema = local.schemas
+  xray_enabled        = var.xray_enabled
+
+  dynamic "log_config" {
+    for_each = var.logging_enabled ? [true] : []
+
+    content {
+      cloudwatch_logs_role_arn = var.create_logs_role ? aws_iam_role.logs[0].arn : var.log_cloudwatch_logs_role_arn
+      field_log_level          = var.log_field_log_level
+      exclude_verbose_content  = var.log_exclude_verbose_content
+    }
+  }
+
+  dynamic "lambda_authorizer_config" {
+    for_each = length(keys(var.lambda_authorizer_config)) == 0 ? [] : [true]
+
+    content {
+      authorizer_uri                   = var.lambda_authorizer_config["authorizer_uri"]
+      authorizer_result_ttl_in_seconds = lookup(var.lambda_authorizer_config, "authorizer_result_ttl_in_seconds", null)
+      identity_validation_expression   = lookup(var.lambda_authorizer_config, "identity_validation_expression", null)
+    }
+  }
+
+  dynamic "openid_connect_config" {
+    for_each = length(keys(var.openid_connect_config)) == 0 ? [] : [true]
+
+    content {
+      issuer    = var.openid_connect_config["issuer"]
+      client_id = lookup(var.openid_connect_config, "client_id", null)
+      auth_ttl  = lookup(var.openid_connect_config, "auth_ttl", null)
+      iat_ttl   = lookup(var.openid_connect_config, "iat_ttl", null)
+    }
+  }
+
+  dynamic "user_pool_config" {
+    for_each = length(keys(var.user_pool_config)) == 0 ? [] : [true]
+
+    content {
+      default_action      = var.user_pool_config["default_action"]
+      user_pool_id        = var.user_pool_config["user_pool_id"]
+      app_id_client_regex = lookup(var.user_pool_config, "app_id_client_regex", null)
+      aws_region          = lookup(var.user_pool_config, "aws_region", null)
+    }
+  }
+
+  dynamic "additional_authentication_provider" {
+    for_each = var.additional_authentication_provider
+
+    content {
+      authentication_type = additional_authentication_provider.value.authentication_type
+
+      dynamic "openid_connect_config" {
+        for_each = length(keys(lookup(additional_authentication_provider.value, "openid_connect_config", {}))) == 0 ? [] : [additional_authentication_provider.value.openid_connect_config]
+
+        content {
+          issuer    = openid_connect_config.value.issuer
+          client_id = lookup(openid_connect_config.value, "client_id", null)
+          auth_ttl  = lookup(openid_connect_config.value, "auth_ttl", null)
+          iat_ttl   = lookup(openid_connect_config.value, "iat_ttl", null)
+        }
+      }
+
+      dynamic "user_pool_config" {
+        for_each = length(keys(lookup(additional_authentication_provider.value, "user_pool_config", {}))) == 0 ? [] : [additional_authentication_provider.value.user_pool_config]
+
+        content {
+          user_pool_id        = user_pool_config.value.user_pool_id
+          app_id_client_regex = lookup(user_pool_config.value, "app_id_client_regex", null)
+          aws_region          = lookup(user_pool_config.value, "aws_region", null)
+        }
+      }
+    }
+  }
+
+  tags = merge({ Name = var.api_name }, var.graphql_api_tags)
+}
+
+# API Association & Domain Name
+resource "aws_appsync_domain_name" "this" {
+  count = var.create_graphql_api && var.domain_name_association_enabled ? 1 : 0
+
+  domain_name     = var.domain_name
+  description     = var.domain_name_description
+  certificate_arn = var.certificate_arn
+}
+
+resource "aws_appsync_domain_name_api_association" "this" {
+  count = var.create_graphql_api && var.domain_name_association_enabled ? 1 : 0
+
+  api_id      = aws_appsync_graphql_api.this[0].id
+  domain_name = aws_appsync_domain_name.this[0].domain_name
+}
+
+# API Cache
+resource "aws_appsync_api_cache" "example" {
+  count = var.create_graphql_api && var.caching_enabled ? 1 : 0
+
+  api_id = aws_appsync_graphql_api.this[0].id
+
+  api_caching_behavior       = var.caching_behavior
+  type                       = var.cache_type
+  ttl                        = var.cache_ttl
+  at_rest_encryption_enabled = var.cache_at_rest_encryption_enabled
+  transit_encryption_enabled = var.cache_transit_encryption_enabled
+}
+
+# API Key
+resource "aws_appsync_api_key" "this" {
+  for_each = var.create_graphql_api && var.authentication_type == "API_KEY" ? var.api_keys : {}
+
+  api_id      = aws_appsync_graphql_api.this[0].id
+  description = each.key
+  expires     = each.value
+}
+
+# Datasource
+resource "aws_appsync_datasource" "this" {
+  for_each = var.create_graphql_api ? var.datasources : {}
+
+  api_id           = aws_appsync_graphql_api.this[0].id
+  name             = each.key
+  type             = each.value.type
+  description      = lookup(each.value, "description", null)
+  # TODO:
+  service_role_arn = lookup(each.value, "service_role_arn", tobool(lookup(each.value, "create_service_role", contains(["AWS_LAMBDA", "AMAZON_DYNAMODB", "AMAZON_ELASTICSEARCH"], each.value.type))) ? aws_iam_role.service_role[each.key].arn : null)
+
+  dynamic "http_config" {
+    for_each = each.value.type == "HTTP" ? [true] : []
+
+    content {
+      endpoint = each.value.endpoint
+    }
+  }
+
+  dynamic "lambda_config" {
+    for_each = each.value.type == "AWS_LAMBDA" ? [true] : []
+
+    content {
+      function_arn = each.value.function_arn
+    }
+  }
+
+  dynamic "dynamodb_config" {
+    for_each = each.value.type == "AMAZON_DYNAMODB" ? [true] : []
+
+    content {
+      table_name             = each.value.table_name
+      region                 = lookup(each.value, "region", null)
+      use_caller_credentials = lookup(each.value, "use_caller_credentials", null)
+    }
+  }
+
+  dynamic "elasticsearch_config" {
+    for_each = each.value.type == "AMAZON_ELASTICSEARCH" ? [true] : []
+
+    content {
+      endpoint = each.value.endpoint
+      region   = lookup(each.value, "region", null)
+    }
+  }
+}
+
+# Resolvers
+resource "aws_appsync_resolver" "this" {
+  for_each = local.resolvers
+
+  api_id = aws_appsync_graphql_api.this[0].id
+  type   = each.value.type
+  field  = each.value.field
+  kind   = lookup(each.value, "kind", null)
+
+  # TODO: update resolver request and response template
+  response_template = file(each.value.response_template)
+  request_template  = file(each.value.request_template)
+  
+
+  # TODO: check data source
+  data_source = lookup(each.value, "datasources", null)
+  max_batch_size = lookup(each.value, "max_batch_size", null)
+}

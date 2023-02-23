@@ -1,0 +1,988 @@
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:20:26 GMT
+Via: 1.1 a2eae5bb517678c9d6b43a2731b4462e.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: caz6nFlHliAFpxQ=
+X-Amz-Cf-Id: _bq-ohcRdrbBqquGuOkg3NwxY-BbfVGDRF17DUDzkw0gXcrOMsD37Q==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 854b3249-df54-4c4e-823c-d46f68761965
+X-Amzn-Trace-Id: Root=1-638766aa-5c1b9f8b244cf1ec2fa854ec;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:20:26.299+0100
+2022-11-30T15:20:26.299+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:26 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:20:26.299+0100
+2022-11-30T15:20:26.299+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:26 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:20:26.299+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [4m0s elapsed]
+2022-11-30T15:20:36.312+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:36 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=45bc6748045a4924a9fad9602431dd94d0cc53ae25ccf0e8168d7a13589b7f36
+X-Amz-Date: 20221130T142036Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:20:36.307+0100
+2022-11-30T15:20:36.506+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:36 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:20:36 GMT
+Via: 1.1 7b20af4202adb6ef25a7920ed74908dc.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: caz8NGyAFiAFksw=
+X-Amz-Cf-Id: _ZhMZVYsQPodweIzYe6FhgJ2TyOVF1rHUlUXV1MLz5TW_2Y3ujkHZQ==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 50a2043d-ca8a-45fe-a926-f9329df21b05
+X-Amzn-Trace-Id: Root=1-638766b4-118765db6f68b2112fd7af61;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:20:36.506+0100
+2022-11-30T15:20:36.507+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:36 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:20:36.506+0100
+2022-11-30T15:20:36.507+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:36 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:20:36.506+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [4m10s elapsed]
+2022-11-30T15:20:46.509+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:46 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=c9fb6820c6acfbcbbbaeb42008aea4970171b13af841fda4b25197c3e05039e8
+X-Amz-Date: 20221130T142046Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:20:46.508+0100
+2022-11-30T15:20:46.701+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:46 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:20:46 GMT
+Via: 1.1 8d07edb8bf98788bf512d51f8cc554f6.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: caz9zH_hFiAFdAw=
+X-Amz-Cf-Id: pcHyhClzy8yMjbMeIhol5vJHzD2Q3-baFoKBqWV4e5PDxhn7hmGVKA==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 4e039bad-ec36-4a6a-b370-88bbdfa017a2
+X-Amzn-Trace-Id: Root=1-638766be-4439600876fdf3797b8e7efb;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:20:46.701+0100
+2022-11-30T15:20:46.702+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:46 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:20:46.701+0100
+2022-11-30T15:20:46.702+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:46 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:20:46.701+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [4m20s elapsed]
+2022-11-30T15:20:56.703+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:56 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=589f994c41b1465280acc704c882a67356da9ada07e784d649557365aad05a3b
+X-Amz-Date: 20221130T142056Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:20:56.702+0100
+2022-11-30T15:20:56.921+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:56 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:20:56 GMT
+Via: 1.1 20a87151baa74b57c01624c82e244c6a.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: caz_ZG6iliAFnzQ=
+X-Amz-Cf-Id: 2K78rugVFGm1bmVrbvh_jnR3Ww3y6x-IxmsPW7sSh6RPBcWDATqjFg==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: d3358277-7007-4a9d-b29a-927e9a9935f5
+X-Amzn-Trace-Id: Root=1-638766c8-73c9268c679a9f4e32814d5b;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:20:56.921+0100
+2022-11-30T15:20:56.921+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:56 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:20:56.921+0100
+2022-11-30T15:20:56.921+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:20:56 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:20:56.921+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [4m30s elapsed]
+2022-11-30T15:21:06.933+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:06 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=ae78d8b9c014e284798a33a40a169fdc7596c15cb16e9c09b3b1112067da9afe
+X-Amz-Date: 20221130T142106Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:06.932+0100
+2022-11-30T15:21:07.106+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:07 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:21:07 GMT
+Via: 1.1 57eb57a4c7d431365ab5b2e18c495bf4.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0BAEepFiAFpRA=
+X-Amz-Cf-Id: _MKvHO30X5y5bzu1f1owLQMTy9TLxK32mk8hWKVN-HDS2AvGhTJ7qw==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 92340b9f-ae0a-4ece-a1bc-509746b25ffc
+X-Amzn-Trace-Id: Root=1-638766d3-404d7b4f6d440c3861d3c30f;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:07.106+0100
+2022-11-30T15:21:07.106+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:07 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:21:07.106+0100
+2022-11-30T15:21:07.106+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:07 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:21:07.106+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [4m40s elapsed]
+2022-11-30T15:21:17.109+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:17 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=aedbc891de1e5c16499c375e2fe9eca118613a3a8dddaa202fe3926d7a2cd027
+X-Amz-Date: 20221130T142117Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:17.108+0100
+2022-11-30T15:21:17.285+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:17 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:21:17 GMT
+Via: 1.1 6b85d8725dd6471c3db1f65d4096afc4.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0ClFRjFiAFvvA=
+X-Amz-Cf-Id: HJABPbefzZuj6a189NAjZPeByWpePZnsG3dpI-l07tJwHaPLrA0_9w==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 903ee300-b5e9-4cfe-b91d-53f7e267859b
+X-Amzn-Trace-Id: Root=1-638766dd-0319a06158b24de252807655;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:17.284+0100
+2022-11-30T15:21:17.285+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:17 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:21:17.284+0100
+2022-11-30T15:21:17.285+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:17 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:21:17.284+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [4m50s elapsed]
+2022-11-30T15:21:27.285+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:27 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=ac2075a42ef0695267699029a9ef80d1c1d7d2c7724d6bc3540a394b8c791074
+X-Amz-Date: 20221130T142127Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:27.285+0100
+2022-11-30T15:21:27.518+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:27 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:21:27 GMT
+Via: 1.1 57eb57a4c7d431365ab5b2e18c495bf4.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0ELHREFiAFabw=
+X-Amz-Cf-Id: mQmRcWMNBRAAQA8CZlL6ysYBSEi9xpmHrRNhkzfWmHPTvRlPSkyLzQ==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 871d05ae-8004-44cd-a1a4-53bd178b6fcc
+X-Amzn-Trace-Id: Root=1-638766e7-3a33170b76a7ceea580edd97;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:27.518+0100
+2022-11-30T15:21:27.518+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:27 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:21:27.518+0100
+2022-11-30T15:21:27.518+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:27 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:21:27.518+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [5m0s elapsed]
+2022-11-30T15:21:37.520+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:37 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=c803725fcc5d2d0fdf26cbb4a03c17c7b2c89622f212d9cf9917e0a087d0623a
+X-Amz-Date: 20221130T142137Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:37.520+0100
+2022-11-30T15:21:37.709+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:37 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:21:37 GMT
+Via: 1.1 149b1af6ad8d2c0fedea82bfb1c29c66.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0FxHj8liAFpxQ=
+X-Amz-Cf-Id: 2WuAK9KMq3lnsZ9caZK_DM2IHy8CD-WjO-50iLy0rCueGjuctzx-cA==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 3d36ae03-176b-40a9-978a-21401d0ff595
+X-Amzn-Trace-Id: Root=1-638766f1-1301a7bb307f733b0acccfdf;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:37.709+0100
+2022-11-30T15:21:37.710+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:37 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:21:37.709+0100
+2022-11-30T15:21:37.710+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:37 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:21:37.709+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [5m10s elapsed]
+2022-11-30T15:21:47.711+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:47 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=f0bb507c9ddbae61a6eea296e7984b75683be8f2b34f3ac726beedc51521fe4d
+X-Amz-Date: 20221130T142147Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:47.711+0100
+2022-11-30T15:21:47.866+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:47 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:21:47 GMT
+Via: 1.1 bfb5bffe90e3b0e760933a7a07d850ba.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0HXENEFiAFUsA=
+X-Amz-Cf-Id: UpcoyXegYFBJnv-TRx9NxBlivvqt9QTckYakrW4DwoXEvvawfSQ9Tw==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: f725745e-dd38-4ec6-ab7a-fc30b46f60fb
+X-Amzn-Trace-Id: Root=1-638766fb-385459e36f7e86e86e5e2d38;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:47.866+0100
+2022-11-30T15:21:47.866+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:47 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:21:47.866+0100
+2022-11-30T15:21:47.866+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:47 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:21:47.866+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [5m20s elapsed]
+2022-11-30T15:21:57.868+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:57 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=d937a00aa117f9e0f9ef805e043d9dc69826acea3c6d73a98b5b1dfc6a57e1b1
+X-Amz-Date: 20221130T142157Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:57.868+0100
+2022-11-30T15:21:58.114+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:58 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:21:58 GMT
+Via: 1.1 bb5a1c03f2335d92378a3e68542733da.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0I9HamFiAFsNA=
+X-Amz-Cf-Id: WJEPfnpmNqhtOqF8946WvTATxFtDOE_VxfAX2kTKiaEixNy30FC8iw==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 019caa26-38f7-490f-b520-2f42b7e15272
+X-Amzn-Trace-Id: Root=1-63876705-04ffae5738b9a7ff1271a05e;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:21:58.113+0100
+2022-11-30T15:21:58.114+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:58 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:21:58.113+0100
+2022-11-30T15:21:58.114+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:21:58 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:21:58.113+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [5m30s elapsed]
+2022-11-30T15:22:08.115+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:08 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=19c2576ca4d2bd8057ae60598e7453a8b585535f81edcf96e9f0380a8efcad13
+X-Amz-Date: 20221130T142208Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:08.115+0100
+2022-11-30T15:22:08.344+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:08 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:22:08 GMT
+Via: 1.1 149b1af6ad8d2c0fedea82bfb1c29c66.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0KjHUkFiAFaOA=
+X-Amz-Cf-Id: j2Vc1OPEZ8wRZXt-sYZKBBcKkNe2LuQkh8nvP70A8QA82hw5cPeMbw==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 0bbae92e-7f71-4999-90ff-f3ebc86493d4
+X-Amzn-Trace-Id: Root=1-63876710-7383e47f5af66e4a5b6b9614;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:08.343+0100
+2022-11-30T15:22:08.344+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:08 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:22:08.343+0100
+2022-11-30T15:22:08.344+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:08 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:22:08.343+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [5m40s elapsed]
+2022-11-30T15:22:18.345+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:18 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=7783882a20ebd947a555e49f6d964c68657e81a6ad6f501ec0a7c5c6b37418b9
+X-Amz-Date: 20221130T142218Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:18.345+0100
+2022-11-30T15:22:18.521+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:18 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:22:18 GMT
+Via: 1.1 7b20af4202adb6ef25a7920ed74908dc.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0MKGNhFiAFjQw=
+X-Amz-Cf-Id: -eQRUj7C5Mx6JfIJI7g3jkJnUvTWqCfQyEs7aj36MeOuUyoiXrl2Ew==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: da16d8b4-9b59-4d45-8f17-9370688037b4
+X-Amzn-Trace-Id: Root=1-6387671a-3ae127c055102db3531b7f7c;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:18.521+0100
+2022-11-30T15:22:18.521+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:18 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:22:18.521+0100
+2022-11-30T15:22:18.521+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:18 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:22:18.521+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [5m50s elapsed]
+2022-11-30T15:22:28.524+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:28 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=6598540f37f25becda57b725d0759a721fe3bf351a383dd0c9ded1f1e852446c
+X-Amz-Date: 20221130T142228Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:28.523+0100
+2022-11-30T15:22:28.777+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:28 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:22:28 GMT
+Via: 1.1 61c90c70feca5f532bf48bc0dc85d516.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0NwF3hFiAFdPA=
+X-Amz-Cf-Id: 8jzRXgRD5IU-KJilAAPWfNLfq8Z2N0rJjjdUGXsBC-CSR4OhFpOlRA==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 97472445-2453-47f7-8b1f-b87f639fb871
+X-Amzn-Trace-Id: Root=1-63876724-21514d4d57a7a6007ace3c6c;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:28.777+0100
+2022-11-30T15:22:28.777+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:28 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:22:28.777+0100
+2022-11-30T15:22:28.777+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:28 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:22:28.777+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [6m0s elapsed]
+2022-11-30T15:22:38.779+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:38 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=629a43f80f961ccb4e8119402eaf692bd982525a5887fb418ad3bfb82a08ab2f
+X-Amz-Date: 20221130T142238Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:38.778+0100
+2022-11-30T15:22:38.984+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:38 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:22:38 GMT
+Via: 1.1 149b1af6ad8d2c0fedea82bfb1c29c66.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0PWEcVFiAFbtg=
+X-Amz-Cf-Id: ws98z5E9MaskA7Xx-piYkSm4bbB1miHkMZi_qppekG6DXpFzvhvfJg==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 6f9610f4-c523-4c4f-8516-a1810cce8b5b
+X-Amzn-Trace-Id: Root=1-6387672e-5a895b9518359028185a0fa8;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:38.983+0100
+2022-11-30T15:22:38.984+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:38 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:22:38.984+0100
+2022-11-30T15:22:38.984+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:38 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:22:38.984+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [6m10s elapsed]
+2022-11-30T15:22:48.986+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:48 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=1ca64f6c276794869c099f87e72d270cf33db7ed7fac5226770fcc7348318381
+X-Amz-Date: 20221130T142248Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:48.985+0100
+2022-11-30T15:22:49.184+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:49 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:22:49 GMT
+Via: 1.1 fb5610ec56d3f427bcbcfdd851770614.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0Q8FGpliAFQOw=
+X-Amz-Cf-Id: dynLVbV-l7ZGLCL0F6uwzGBY0lJ2Znr-1c6Y0TyfXt-mvn4ouPMTHg==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: cf4675cc-9a19-4d98-bdba-617436593579
+X-Amzn-Trace-Id: Root=1-63876739-320ed9e7054f67e43f5807a0;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:49.183+0100
+2022-11-30T15:22:49.184+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:49 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:22:49.183+0100
+2022-11-30T15:22:49.184+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:49 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:22:49.183+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [6m20s elapsed]
+2022-11-30T15:22:59.186+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:59 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=58e6e4d8de79b21ccdc85bb82f2d9e3dc50b210abfaec784e32e0f52cbf9703e
+X-Amz-Date: 20221130T142259Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:59.185+0100
+2022-11-30T15:22:59.381+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:59 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 165
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:22:59 GMT
+Via: 1.1 6c2674fb15c38f5458794dd680986b8e.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0SiHFKFiAFutw=
+X-Amz-Cf-Id: EFIsbUkboHpkuphEadrnYBYBz96zCw_vAnz8ghVEIB7orc5WZU6kAw==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 7ec1a49a-ac9d-426a-b2e6-90d3c6c2e27e
+X-Amzn-Trace-Id: Root=1-63876743-00ae11b02b3225ba7a730c6a;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:22:59.381+0100
+2022-11-30T15:22:59.381+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:59 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"CREATING"}}: timestamp=2022-11-30T15:22:59.381+0100
+2022-11-30T15:22:59.381+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:22:59 [TRACE] Waiting 10s before next try: timestamp=2022-11-30T15:22:59.381+0100
+module.appsync.aws_appsync_api_cache.example[0]: Still creating... [6m30s elapsed]
+2022-11-30T15:23:09.382+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:23:09 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=8a0cdb86baa2ba2c46ec1e96ce08e806812a8338c79bc8316e9fc0fdcb1f111e
+X-Amz-Date: 20221130T142309Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:23:09.382+0100
+2022-11-30T15:23:09.485+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:23:09 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 166
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:23:09 GMT
+Via: 1.1 20a87151baa74b57c01624c82e244c6a.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0UIHdpFiAFrZw=
+X-Amz-Cf-Id: SZAK5C2OQvGe5wH_acSU_rAWZaISiKffc00X8Dio9BAABEGwTPEqgw==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: 47e1c5b7-ffcd-438d-8f38-5b2c14dcbb25
+X-Amzn-Trace-Id: Root=1-6387674d-16d8369821bcfbb82135d03d;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:23:09.485+0100
+2022-11-30T15:23:09.486+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:23:09 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"AVAILABLE"}}: timestamp=2022-11-30T15:23:09.485+0100
+2022-11-30T15:23:09.486+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:23:09 [DEBUG] [aws-sdk-go] DEBUG: Request appsync/GetApiCache Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+GET /v1/apis/pka5yaqtvbbupf43marjb7xjgi/ApiCaches HTTP/1.1
+Host: appsync.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 (+https://www.terraform.io) terraform-provider-aws/dev (+https://registry.terraform.io/providers/hashicorp/aws) aws-sdk-go/1.44.13 (go1.16; darwin; arm64)
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QVXGNAMVJ/20221130/eu-central-1/appsync/aws4_request, SignedHeaders=host;x-amz-date;x-amz-security-token, Signature=8a0cdb86baa2ba2c46ec1e96ce08e806812a8338c79bc8316e9fc0fdcb1f111e
+X-Amz-Date: 20221130T142309Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDAHWbnR718Ao+LiLhyK3AU21CTP+rzAH1rVGgK/sQjYpcQdDhU+T/4AAoAwI6+NmZVUHiCfHb2S2ry+Fw3vt16V7QuN5vubCMj7v+EDTlr+l3EPR8ul11FNgWRt9PacGb7HaYe0r2atd2m4sKRRIImifBGrW17wWXzcMzTF27HqyuQXEvBv2okp8ArXexwUJ4KJ75kAhW2pTeBvDeGS1LCBdCTgU0Rp9k+wNExIwHSQNjicVv29YoLzrQSH+FPGk0eeDst63Kyi7y52cBjItKhxPiTYDAAlDnlNBLTWxSoLJw3m90DpCXFoQ9XOZGXjjbue8obSL/bV76tGK
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:23:09.485+0100
+2022-11-30T15:23:09.606+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:23:09 [DEBUG] [aws-sdk-go] DEBUG: Response appsync/GetApiCache Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 166
+Access-Control-Allow-Headers: Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+Access-Control-Allow-Methods: GET,OPTIONS,POST
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: x-amzn-RequestId,x-amzn-ErrorType
+Content-Type: application/json
+Date: Wed, 30 Nov 2022 14:23:09 GMT
+Via: 1.1 0ece2d48b2ca1badca11fa675b7785ea.cloudfront.net (CloudFront)
+X-Amz-Apigw-Id: ca0UJFk9FiAFn8A=
+X-Amz-Cf-Id: 9K8D3-Mi1BJJSNB7CLK062s83TOC6v4lUfVEadJX54TDGWKKMetqzw==
+X-Amz-Cf-Pop: FRA56-P6
+X-Amzn-Requestid: d611aff2-5124-494f-9701-04ee69271d29
+X-Amzn-Trace-Id: Root=1-6387674d-7c59369501d26d061bf594f7;Sampled=0
+X-Cache: Miss from cloudfront
+
+
+-----------------------------------------------------: timestamp=2022-11-30T15:23:09.606+0100
+2022-11-30T15:23:09.607+0100 [INFO]  provider.terraform-provider-aws_v3.75.2_x5: 2022/11/30 15:23:09 [DEBUG] [aws-sdk-go] {"apiCache":{"ttl":60,"apiCachingBehavior":"PER_RESOLVER_CACHING","transitEncryptionEnabled":true,"atRestEncryptionEnabled":true,"type":"SMALL","status":"AVAILABLE"}}: timestamp=2022-11-30T15:23:09.606+0100
+module.appsync.aws_appsync_api_cache.example[0]: Creation complete after 6m35s [id=pka5yaqtvbbupf43marjb7xjgi]
+2022-11-30T15:23:09.611+0100 [DEBUG] Uploading remote state to S3: {
+  Body: buffer(0x140021ed470),
+  Bucket: "tf-state-for-dev-agr-mvf",
+  ContentLength: 10796,
+  ContentType: "application/json",
+  Key: "appsync/staging/terraform.tfstate"
+}
+2022-11-30T15:23:09.614+0100 [DEBUG] [aws-sdk-go] DEBUG: Request s3/PutObject Details:
+---[ REQUEST POST-SIGN ]-----------------------------
+PUT /appsync/staging/terraform.tfstate HTTP/1.1
+Host: tf-state-for-dev-agr-mvf.s3.eu-central-1.amazonaws.com
+User-Agent: APN/1.0 HashiCorp/1.0 Terraform/1.2.8 aws-sdk-go/1.42.35 (go1.18.1; darwin; arm64)
+Content-Length: 10796
+Authorization: AWS4-HMAC-SHA256 Credential=ASIARSP63S7QYQMRPTUM/20221130/eu-central-1/s3/aws4_request, SignedHeaders=content-length;content-md5;content-type;host;x-amz-content-sha256;x-amz-date;x-amz-security-token, Signature=6594617a45b4e60492545097b64389c892cfd89fe7b82ca3eae88c78d0eb01e4
+Content-Md5: ZTaKgWbcr6eBePFx0uUhCQ==
+Content-Type: application/json
+X-Amz-Content-Sha256: ba2f942d0e2062b5c3fbe06833fb903bb9675ad992ffe7b25e8e1db312c1787f
+X-Amz-Date: 20221130T142309Z
+X-Amz-Security-Token: FwoGZXIvYXdzEHAaDBwHZbQ8qphBj1QRbiK3AeySCwQ2/WlwDmnJZ5QjrZeGVFTGkYmWzpOZpjjN26bPpGm1Z5fNagaz2GAhjmVLKlCUX8moj8L2yE87M5vJSMuarnnSLQOMd96+rj/BdXRCZ1LbvtB05gG9PtCV8hB9Dz3olkzikzwi8RkJn8vyOM6YiHXpS9lRWBOQ7/lG4ntpGRWtg4XlP5jFbXaDffTlUF1jM0m8Q+chOdRE4eANo9iyCUEtLCiTYOcsgajG9tpjImnxGdwuAyi1y52cBjItQWHPiE80Nbo8fNpXFdD62riM4QTLgsWnuKawpX08KbunYlk8LAf0TP6gy4vp
+Accept-Encoding: gzip
+
+{
+  "version": 4,
+  "terraform_version": "1.2.8",
+  "serial": 23,
+  "lineage": "316d6e27-eacd-7295-9ff1-db0b61faefc3",
+  "outputs": {
+    "appsync_api_key_id": {
+      "value": {},
+      "type": [
+        "object",
+        {}
+      ]
+    },
+    "appsync_api_key_key": {
+      "value": {},
+      "type": [
+        "object",
+        {}
+      ],
+      "sensitive": true
+    },
+    "appsync_graphql_api_arn": {
+      "value": "arn:aws:appsync:eu-central-1:108445538273:apis/pka5yaqtvbbupf43marjb7xjgi",
+      "type": "string"
+    },
+    "appsync_graphql_api_fqdns": {
+      "value": {
+        "GRAPHQL": "laot57dvyzgk3htka4rpsi52tq.appsync-api.eu-central-1.amazonaws.com",
+        "REALTIME": "laot57dvyzgk3htka4rpsi52tq.appsync-realtime-api.eu-central-1.amazonaws.com"
+      },
+      "type": [
+        "object",
+        {
+          "GRAPHQL": "string",
+          "REALTIME": "string"
+        }
+      ]
+    },
+    "appsync_graphql_api_id": {
+      "value": "pka5yaqtvbbupf43marjb7xjgi",
+      "type": "string"
+    },
+    "appsync_graphql_api_uris": {
+      "value": {
+        "GRAPHQL": "https://laot57dvyzgk3htka4rpsi52tq.appsync-api.eu-central-1.amazonaws.com/graphql",
+        "REALTIME": "wss://laot57dvyzgk3htka4rpsi52tq.appsync-realtime-api.eu-central-1.amazonaws.com/graphql"
+      },
+      "type": [
+        "map",
+        "string"
+      ]
+    }
+  },
+  "resources": [
+    {
+      "module": "module.appsync",
+      "mode": "data",
+      "type": "aws_caller_identity",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "account_id": "108445538273",
+            "arn": "arn:aws:sts::108445538273:assumed-role/OrganizationAccountAccessRole/1669817783330076000",
+            "id": "108445538273",
+            "user_id": "AROARSP63S7Q6VBHJHFBX:1669817783330076000"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.appsync",
+      "mode": "data",
+      "type": "aws_iam_policy_document",
+      "name": "assume_role",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "2027410878",
+            "json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"sts:AssumeRole\",\n      \"Principal\": {\n        \"Service\": \"appsync.amazonaws.com\"\n      }\n    }\n  ]\n}",
+            "override_json": null,
+            "override_policy_documents": null,
+            "policy_id": null,
+            "source_json": null,
+            "source_policy_documents": null,
+            "statement": [
+              {
+                "actions": [
+                  "sts:AssumeRole"
+                ],
+                "condition": [],
+                "effect": "Allow",
+                "not_actions": [],
+                "not_principals": [],
+                "not_resources": [],
+                "principals": [
+                  {
+                    "identifiers": [
+                      "appsync.amazonaws.com"
+                    ],
+                    "type": "Service"
+                  }
+                ],
+                "resources": [],
+                "sid": ""
+              }
+            ],
+            "version": "2012-10-17"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.appsync",
+      "mode": "data",
+      "type": "aws_iam_policy_document",
+      "name": "service_policy",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": "dynamodb1",
+          "schema_version": 0,
+          "attributes": {
+            "id": "959572336",
+            "json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"dynamodb\",\n      \"Effect\": \"Allow\",\n      \"Action\": [\n        \"dynamodb:UpdateItem\",\n        \"dynamodb:Scan\",\n        \"dynamodb:Query\",\n        \"dynamodb:PutItem\",\n        \"dynamodb:GetItem\",\n        \"dynamodb:DeleteItem\",\n        \"dynamodb:BatchWriteItem\",\n        \"dynamodb:BatchGetItem\"\n      ],\n      \"Resource\": [\n        \"arn:aws:dynamodb:eu-central-1:108445538273:table/change_management_internal/*\",\n        \"arn:aws:dynamodb:eu-central-1:108445538273:table/change_management_internal\"\n      ]\n    }\n  ]\n}",
+            "override_json": null,
+            "override_policy_documents": null,
+            "policy_id": null,
+            "source_json": null,
+            "source_policy_documents": null,
+            "statement": [
+              {
+                "actions": [
+                  "dynamodb:BatchGetItem",
+                  "dynamodb:BatchWriteItem",
+                  "dynamodb:DeleteItem",
+                  "dynamodb:GetItem",
+                  "dynamodb:PutItem",
+                  "dynamodb:Query",
+                  "dynamodb:Scan",
+                  "dynamodb:UpdateItem"
+                ],
+                "condition": [],
+                "effect": "Allow",
+                "not_actions": [],
+                "not_principals": [],
+                "not_resources": [],
+                "principals": [],
+                "resources": [
+                  "arn:aws:dynamodb:eu-central-1:108445538273:table/change_management_internal",
+                  "arn:aws:dynamodb:eu-central-1:108445538273:table/change_management_internal/*"
+                ],
+                "sid": "dynamodb"
+              }
+            ],
+            "version": "2012-10-17"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "module": "module.appsync",
+      "mode": "managed",
+      "type": "aws_appsync_api_cache",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "api_caching_behavior": "PER_RESOLVER_CACHING",
+            "api_id": "pka5yaqtvbbupf43marjb7xjgi",
+            "at_rest_encryption_enabled": true,
+            "id": "pka5yaqtvbbupf43marjb7xjgi",
+            "transit_encryption_enabled": true,
+            "ttl": 60,
+            "type": "SMALL"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.appsync.aws_appsync_graphql_api.this",
+            "module.appsync.aws_iam_role.logs"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.appsync",
+      "mode": "managed",
+      "type": "aws_appsync_api_key",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.appsync",
+      "mode": "managed",
+      "type": "aws_appsync_datasource",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.appsync",
+      "mode": "managed",
+      "type": "aws_appsync_domain_name_api_association",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.appsync",
+      "mode": "managed",
+      "type": "aws_appsync_graphql_api",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "additional_authentication_provider": [],
+            "arn": "arn:aws:appsync:eu-central-1:108445538273:apis/pka5yaqtvbbupf43marjb7xjgi",
+            "authentication_type": "AMAZON_COGNITO_USER_POOLS",
+            "id": "pka5yaqtvbbupf43marjb7xjgi",
+            "lambda_authorizer_config": [],
+            "log_config": [],
+            "name": "sample-appsync-api",
+            "openid_connect_config": [],
+            "schema": "type CM implements Node {\n  id: ID!\n  creationDate: Int!\n  companyAndApplicant: [String!]!\n  latestUpdateDate: Int!\n  updater: String\n  topic: String\n  affectedPartNumbers: [Int!]!\n  description: String!\n  technicalDocumentation: String!\n  changeImplemented: String!\n  approval: [String!]!\n  impact: [String!]!\n  assemblies: [String!]!\n  costEffects: [String!]!\n  affectedModels: [String!]!\n  modelFirstImplemented: String!\n  statusOfChange: String!\n  implemented: Boolean\n  creator: String!\n}type CMPagination {\n    cm: [CM!]!\n    nextToken: String\n}type Mutation {\n\taddCM(\n\t\tid: ID!\n        creationDate: Int!\n        companyAndApplicant: [String!]!\n        latestUpdateDate: Int!\n        updater: String\n        topic: String\n        affectedPartNumbers: [Int!]!\n        description: String!\n        technicalDocumentation: String!\n        changeImplemented: String!\n        approval: [String!]!\n        impact: [String!]!\n        assemblies: [String!]!\n        costEffects: [String!]!\n        affectedModels: [String!]!\n        modelFirstImplemented: String!\n        statusOfChange: String!\n        implemented: Boolean\n        creator: String!\n\t): CM\n}interface Node {\n  id: ID!\n}type Query {\n    getCM(\n        id: Int!,\n        nextToken: String\n    ): CMPagination!\n\n}",
+            "tags": {
+              "Name": "sample-appsync-api"
+            },
+            "tags_all": {
+              "Name": "sample-appsync-api"
+            },
+            "uris": {
+              "GRAPHQL": "https://laot57dvyzgk3htka4rpsi52tq.appsync-api.eu-central-1.amazonaws.com/graphql",
+              "REALTIME": "wss://laot57dvyzgk3htka4rpsi52tq.appsync-realtime-api.eu-central-1.amazonaws.com/graphql"
+            },
+            "user_pool_config": [
+              {
+                "app_id_client_regex": "",
+                "aws_region": "eu-central-1",
+                "default_action": "DENY",
+                "user_pool_id": "eu-central-1_GAtMVeLwu"
+              }
+            ],
+            "xray_enabled": false
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.appsync.aws_iam_role.logs"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.appsync",
+      "mode": "managed",
+      "type": "aws_iam_role",
+      "name": "logs",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    },
+    {
+      "module": "module.appsync",
+      "mode": "managed",
+      "type": "aws_iam_role_policy",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": []
+    }
+  ]
+}
+
+-----------------------------------------------------
+2022-11-30T15:23:09.808+0100 [DEBUG] [aws-sdk-go] DEBUG: Response s3/PutObject Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 0
+Date: Wed, 30 Nov 2022 14:23:10 GMT
+Etag: "65368a8166dcafa78178f171d2e52109"
+Server: AmazonS3
+X-Amz-Id-2: NumhTzJXYiUjF/4aywqwM+Z5CjeJUV6T64B3MKn7q0r396B5uQ8L//M280Jkqga18mzM+7j0oBA=
+X-Amz-Request-Id: 63W6JXQQKGM3TJ5Q
+X-Amz-Server-Side-Encryption: AES256
+X-Amz-Version-Id: 3Wt1vK6__z.OYV3qlD1Y5HNWbP7ECKoZ
+
+
+-----------------------------------------------------
+2022-11-30T15:23:09.808+0100 [DEBUG] [aws-sdk-go]
+╷
+│ Error: error creating Appsync Domain Name: InvalidParameter: 1 validation error(s) found.
+│ - minimum field size of 20, CreateDomainNameInput.CertificateArn.
+│ 
+│ 
+│   with module.appsync.aws_appsync_domain_name.this[0],
+│   on ../appsync.tf line 102, in resource "aws_appsync_domain_name" "this":
+│  102: resource "aws_appsync_domain_name" "this" {
+│ 
+╵
+╷
+│ Error: error creating AppSync Resolver: NotFoundException: No data source found named change_management_internal
+│ 
+│   with module.appsync.aws_appsync_resolver.this["Query_getCM_response.vtl"],
+│   on ../appsync.tf line 187, in resource "aws_appsync_resolver" "this":
+│  187: resource "aws_appsync_resolver" "this" {
+│ 
+╵
+╷
+│ Error: error creating AppSync Resolver: NotFoundException: No data source found named change_management_internal
+│ 
+│   with module.appsync.aws_appsync_resolver.this["Mutation_addCM_request.vtl"],
+│   on ../appsync.tf line 187, in resource "aws_appsync_resolver" "this":
+│  187: resource "aws_appsync_resolver" "this" {
+│ 
+╵
+╷
+│ Error: error creating AppSync Resolver: NotFoundException: No data source found named change_management_internal
+│ 
+│   with module.appsync.aws_appsync_resolver.this["Mutation_addCM_response.vtl"],
+│   on ../appsync.tf line 187, in resource "aws_appsync_resolver" "this":
+│  187: resource "aws_appsync_resolver" "this" {
+│ 
+╵
+╷
+│ Error: error creating AppSync Resolver: NotFoundException: No data source found named change_management_internal
+│ 
+│   with module.appsync.aws_appsync_resolver.this["Query_getCM_request.vtl"],
+│   on ../appsync.tf line 187, in resource "aws_appsync_resolver" "this":
+│  187: resource "aws_appsync_resolver" "this" {
+│ 
+╵
+╷
+│ Error: failed creating IAM Role (dynamodb1-role): EntityAlreadyExists: Role with name dynamodb1-role already exists.
+│       status code: 409, request id: 45c2994a-83a9-4809-812d-6d84393af04a
+│ 
+│   with module.appsync.aws_iam_role.service_role["dynamodb1"],
+│   on ../iam.tf line 83, in resource "aws_iam_role" "service_role":
+│   83: resource "aws_iam_role" "service_role" {
+│ 
+╵
+2022-11-30T15:23:09.845+0100 [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022-11-30T15:23:09.853+0100 [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/aws/3.75.2/darwin_arm64/terraform-provider-aws_v3.75.2_x5 pid=80860
+2022-11-30T15:23:09.853+0100 [DEBUG] provider: plugin exited
+➜  examples git:(main) ✗ 

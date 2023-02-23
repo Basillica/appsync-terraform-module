@@ -1,0 +1,4 @@
+type CMPagination {
+    cm: [CM!]!
+    nextToken: String
+}

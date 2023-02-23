@@ -1,0 +1,8 @@
+{
+    "Query": {
+        "getCM": "change_management_internal"
+    },
+    "Mutation": {
+        "addCM": "change_management_internal"
+    }
+}

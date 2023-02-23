@@ -1,0 +1,69 @@
+{
+    "version" : "2017-02-28",
+    "operation" : "PutItem",
+    "key" : {
+        "uuid": $util.dynamodb.toDynamoDBJson(${ctx.args.uuid})
+    },
+    "attributeValues" : {
+        #if($ctx.args.uuid)
+                "uuid" : $util.dynamodb.toDynamoDBJson(${ctx.args.uuid}),
+        #end
+        #if($ctx.args.creationDate)
+                "creationDate": $util.dynamodb.toDynamoDBJson(${ctx.args.creationDate}),
+        #end
+        #if($ctx.args.companyAndApplicant)
+                "companyAndApplicant": $util.dynamodb.toDynamoDBJson(${ctx.args.companyAndApplicant}),
+        #end
+        #if($ctx.args.latestUpdateDate)
+                "latestUpdateDate": $util.dynamodb.toDynamoDBJson(${ctx.args.latestUpdateDate}),
+        #end
+        #if($ctx.args.updater)
+                "updater": $util.dynamodb.toDynamoDBJson(${ctx.args.updater}),
+        #end
+        #if($ctx.args.topic)
+                "topic": $util.dynamodb.toDynamoDBJson(${ctx.args.topic}),
+        #end
+        #if($ctx.args.affectedPartNumbers)
+                "affectedPartNumbers": $util.dynamodb.toDynamoDBJson(${ctx.args.affectedPartNumbers}),
+        #end
+        #if($ctx.args.description)
+                "description": $util.dynamodb.toDynamoDBJson(${ctx.args.description}),
+        #end
+        #if($ctx.args.technicalDocumentation)
+                "technicalDocumentation": $util.dynamodb.toDynamoDBJson(${ctx.args.technicalDocumentation}),
+        #end
+        #if($ctx.args.changeImplemented)
+                "changeImplemented": $util.dynamodb.toDynamoDBJson(${ctx.args.changeImplemented}),
+        #end
+        #if($ctx.args.approval)
+                "approval": $util.dynamodb.toDynamoDBJson(${ctx.args.approval}),
+        #end
+        #if($ctx.args.impact)
+                "impact": $util.dynamodb.toDynamoDBJson(${ctx.args.impact}),
+        #end
+        #if($ctx.args.assemblies)
+                "assemblies": $util.dynamodb.toDynamoDBJson(${ctx.args.assemblies}),
+        #end
+        #if($ctx.args.costEffects)
+                "costEffects": $util.dynamodb.toDynamoDBJson(${ctx.args.costEffects}),
+        #end
+        #if($ctx.args.affectedModels)
+                "affectedModels": $util.dynamodb.toDynamoDBJson(${ctx.args.affectedModels}),
+        #end
+        #if($ctx.args.modelFirstImplemented)
+                "modelFirstImplemented": $util.dynamodb.toDynamoDBJson(${ctx.args.modelFirstImplemented}),
+        #end
+        #if($ctx.args.statusOfChange)
+                "statusOfChange": $util.dynamodb.toDynamoDBJson(${ctx.args.statusOfChange}),
+        #end
+        #if($ctx.args.implemented)
+                "implemented": $util.dynamodb.toDynamoDBJson(${ctx.args.implemented}),
+        #end
+        #if($ctx.args.creator)
+                "creator": $util.dynamodb.toDynamoDBJson(${ctx.args.creator}),
+        #end
+        #if($ctx.args.approvalList)
+                "approvalList": $util.dynamodb.toDynamoDBJson(${ctx.args.approvalList}),
+        #end
+    }
+}
